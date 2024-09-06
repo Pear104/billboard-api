@@ -1,0 +1,26 @@
+{
+  "name": "billboard-api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon --watch src src/index.ts",
+    "build": "tsc -p tsconfig.json"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "fastify": "^4.28.1",
+    "fastify-cli": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}
