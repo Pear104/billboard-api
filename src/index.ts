@@ -1,19 +1,22 @@
-import fastify from "fastify";
+import fastify, { FastifyInstance } from "fastify";
 import charts from "./routes/charts";
 import news from "./routes/news";
 import stream from "./routes/stream";
-const server = fastify();
+
+export default function (fastify: FastifyInstance, opts: any, done: any) {
+  fastify.register(news, { prefix: "/news" });
+  fastify.register(charts, { prefix: "/charts" });
+  fastify.register(stream, { prefix: "/stream" });
+  done();
+}
 
 // Run the server!
 // server.register(charts, { prefix: "/charts" });
-server.register(news, { prefix: "/news" });
-server.register(charts, { prefix: "/charts" });
-server.register(stream, { prefix: "/stream" });
-server.listen({ port: 3000 }, function (err, address) {
-  if (err) {
-    server.log.error(err);
-    process.exit(1);
-  }
+// server.listen({ port: 3000 }, function (err, address) {
+//   if (err) {
+//     server.log.error(err);
+//     process.exit(1);
+//   }
 
-  console.log(`Server is now listening on ${address}`);
-});
+//   console.log(`Server is now listening on ${address}`);
+// });
