@@ -1,6 +1,7 @@
 import Fastify, { FastifyReply, FastifyRequest } from "fastify";
 import * as dotenv from "dotenv";
 import server from "../src/index";
+import fastifyCors from "@fastify/cors";
 dotenv.config();
 
 // Instantiate Fastify with some config
@@ -8,7 +9,10 @@ const app = Fastify({
   logger: false,
 });
 
-// Register your application as a normal plugin.
+app.register(fastifyCors, {
+  origin: "*",
+  methods: "GET",
+});
 app.register(server, {
   prefix: "/",
 });
