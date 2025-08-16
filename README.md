@@ -16,7 +16,7 @@ All API requests are made to the following base URL:
 
 #### Hot 100
 
-- **Endpoint:** `/hot-100`
+- **Endpoint:** `/charts/hot-100`
 - **Method:** `GET`
 - **Description:** Get Billboard Hot 100 chart.
 - **Response:**
@@ -31,7 +31,7 @@ All API requests are made to the following base URL:
 
 #### Billboard 200
 
-- **Endpoint:** `/billboard-200`
+- **Endpoint:** `/charts/billboard-200`
 - **Method:** `GET`
 - **Description:** Get Billboard 200 chart.
 - **Response:**
@@ -46,7 +46,7 @@ All API requests are made to the following base URL:
 
 #### Billboard Global 200
 
-- **Endpoint:** `/billboard-blobal-200`
+- **Endpoint:** `/charts/billboard-blobal-200`
 - **Method:** `GET`
 - **Description:** Get Billboard Global 200 chart.
 - **Response:**
@@ -61,7 +61,7 @@ All API requests are made to the following base URL:
 
 #### Billboard Titkok 50
 
-- **Endpoint:** `/billboard-titkok-50`
+- **Endpoint:** `/charts/billboard-titkok-50`
 - **Method:** `GET`
 - **Description:** Get Billboard Titkok 50 chart.
 - **Response:**
@@ -76,7 +76,7 @@ All API requests are made to the following base URL:
 
 #### Billboard Artist 100
 
-- **Endpoint:** `/artist-100`
+- **Endpoint:** `/charts/artist-100`
 - **Method:** `GET`
 - **Description:** Get Billboard Artist 100 chart.
 - **Response:**
